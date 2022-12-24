@@ -1,0 +1,290 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	position: absolute;
+	min-width: 780px;
+	width: 100%;
+	display: block;
+	height: 100%;
+}
+.headline {
+	display: block;
+	position: relative;
+	height: 120px;
+	min-height: 10%;
+}
+.bg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+#newimg {
+	position: absolute;
+	left: 10%;
+	height: 80%;
+	top: 5%;
+}
+#vt {
+	position: absolute;
+	right: 0px;
+	height: 96%;
+}
+.page {
+	position: relative;
+	display: block;
+	background-image: url(PageBG.jpg);
+	background-repeat: repeat;
+	min-height: 90%;
+}
+.page2 {
+	background-image: url(Page2BG.png);
+	background-repeat: repeat-y;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+.page3 {
+	background-image: url(Page3BG.jpg);
+	position: absolute;
+	left: 600px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.menudiv {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+.menudiv a {
+	outline: none;
+	position: relative;
+	height: 70px;
+	width: 2%;
+	margin-left: 14%;
+	float: left;
+}
+.menudiv a#pz {
+	margin-left: 18%;
+}
+.menudiv a#cont {
+	margin-left: 20%;
+}
+.menudiv a img{
+	left: -60px;
+	height: 100%;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	top: 0px;
+	position: absolute;
+}
+.menudiv a#pz img {
+	left: -95px;
+}
+.menudiv a#cont img {
+	left: -75px;
+}
+.menudiv   a img.hoverimage{
+	visibility: hidden;
+}
+.menudiv a:hover img {
+	visibility: visible;
+}
+.menudiv a.active img {
+	background-image: url(Line.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 42px;
+	visibility: visible;
+}
+
+
+
+
+
+.txt {
+	position: relative;
+	display: block;
+	margin-left: 18%;
+	margin-top: 4%;
+	margin-right: 4%;
+	padding-bottom: 130px;
+	min-height: 450px;
+}
+
+
+#woman {
+	float: right;
+	position: relative;
+	height: 500px;
+}
+#ug1 {
+	position: absolute;
+	left: -45px;
+	top: -15px;
+}
+#ug2 {
+	position: absolute;
+	right: -20px;
+	bottom: 115px;
+}
+.txtright {
+	text-align: right;
+	display: block;
+}
+.txt h2 {
+	position: relative;
+	text-indent: 30%;
+	white-space: nowrap;
+}
+.txt h3 {
+	position: relative;
+	text-indent: 25%;
+}
+
+.txt p {
+	text-indent: 20px;
+}
+.txt ul.lc {
+	text-transform: lowercase;
+}
+.txt a     {
+	font-weight: bold;
+	color: #922C20;
+	outline: none;
+	text-align: center;
+	position: relative;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.txt span {
+	font-weight: bold;
+	color: #922C20;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+.txt a img {
+	border: thick ridge #9C362A;
+	margin: 10px;
+}
+.txt a:visited   {
+	color: #922C20;
+}
+.txt a:hover {
+	color: #310F0B;
+}
+.txt a:hover img {
+	border: thick solid #FFF;
+}
+
+.txt a.galleryselect{
+	background-color: #801E15;
+	padding: 7px;
+	float: left;
+	color: #FFF;
+}
+.txt a.galleryselect img{
+	display: block;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	margin: 0px;
+}
+.txt a.galleryselect:hover {
+	color: #993327;
+	background-color: #FFF;
+}
+.txt#gallery h2,.txt#gallery h3{
+	line-height: 3;
+	text-align: center;
+	text-indent: 0px;
+	color: #933128;
+}
+
+.txt#gallery a {
+	margin: 0px;
+}
+
+
+#platok  {
+	margin: 30px;
+	max-width: 90%;
+
+}
+#map {
+	border: thick solid #85261F;
+}
+.txt#cont h2{
+	text-align: center;
+	text-indent: 0;
+	white-space: normal;
+}
+.bottomMenu {
+	display: block;
+	position: absolute;
+	left: 0px;
+	bottom: 80px;
+	font-size: 18px;
+	font-weight: bold;
+	width: 100%;
+	white-space: nowrap;
+	text-align: center;
+}
+.bottomMenu a{
+	color: #902A1E;
+	margin-right: 4%;
+	margin-left: 4%;
+}
+.bottomMenu a:hover{
+	color: #310F0B;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+	position: absolute;
+	display: block;
+	height: 70px;
+	width: 100%;
+	left: 0px;
+	bottom: 0px;
+}
+#vb {
+	position: absolute;
+	left: 6%;
+	top: 35%;
+	height: 24%;
+}
+.footer p {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	color: #E1CF6D;
+	text-align: center;
+	width: 300px;
+	float: right;
+	clear: right;
+	height: 25%;
+	position: relative;
+	top: 10%;
+}
