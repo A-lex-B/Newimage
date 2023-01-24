@@ -9,7 +9,11 @@ class NewImageViewAction extends ViewAction
 
     public function render($viewName)
     {
-        return $this->controller->renderPartial($viewName);
+        return $this->controller->renderPartial($viewName, [
+            'NIassets' => $this->controller->NIassets,
+            'NIassetsURL' => $this->controller->NIassetsURL,
+            'URL' => $this->controller->URL,
+        ]);
     }
 }
 ?>
