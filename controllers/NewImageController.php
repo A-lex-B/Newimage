@@ -11,37 +11,26 @@ use yii;
 class NewImageController extends Controller
 {
     public $layout = 'newimage';
+    public $currentView = 'index';
     
-    public function registerBundles()
+    public function actionPage()
     {
-        if (Yii::$app->request->get('view') != 'gallerypage')
+        $this->currentView = Yii::$app->request->get('view', $this->currentView);
+        
+        if ($this->currentView != 'gallerypage')
         {
-            $NIassets = NewImageAsset::register($this->view);
+            $NIassetsURL = NewImageAsset::register($this->view)->baseUrl;
         }
         else
         {
-            $this->view->params['Galleryassets'] = GalleryAsset::register($this->view);
-            $NIassets = $this->view->assetBundles['app\assets\NewImageAsset'];
+            $Galleryassets = GalleryAsset::register($this->view);
+            $NIassetsURL = $this->view->assetBundles['app\assets\NewImageAsset']->baseUrl;
         }
-        $this->view->params['NIassetsURL'] = $NIassets->baseUrl;
-        $this->view->params['URL'] = rtrim(Url::current(['view' => null, 'pagename' => null]), '/');
+        $URL = rtrim(Url::current(['view' => null, 'pagename' => null]), '/');
 
-    }
-    
-    public function actions()
-    {
-        return [
-            'page' => [
-                'class' => 'yii\web\ViewAction',
-                'viewPrefix' => '',
-            ],
-        ];
-    }
+        $this->view->params['NIassetsURL'] = $NIassetsURL;
 
-    public function beforeAction($action)
-    {
-        parent::beforeAction($action);
-        $this->registerBundles();
-        return true;
+        $params = compact(['NIassetsURL', isset($Galleryassets)?'Galleryassets':null, 'URL']);
+        return $this->render($this->currentView, $params);
     }
 }

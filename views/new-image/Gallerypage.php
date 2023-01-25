@@ -1,9 +1,4 @@
-<?php
-$this->title = ' - галерея';
-$NIassetsURL = $this->params['NIassetsURL'];
-$Galleryassets = $this->params['Galleryassets'];
-$URL = $this->params['URL'];
-?>
+<?php $this->title = ' - галерея' ?>
 
 <div class="headline">
   <img src="<?= $NIassetsURL ?>/HeadlineBG.jpg" class="bg" />
@@ -17,19 +12,19 @@ $URL = $this->params['URL'];
     <img src="<?= $NIassetsURL ?>/Menu-main.png" />
     <img src="<?= $NIassetsURL ?>/Menu-main2.png" class="hoverimage" />
     </a>
-    <a href="<?= $URL ?>/Uslugi">
+    <a href="<?= $URL ?>/uslugi">
     <img src="<?= $NIassetsURL ?>/Menu-uslugi.png" />
     <img src="<?= $NIassetsURL ?>/Menu-uslugi2.png" class="hoverimage" />
     </a>
-    <a href="<?= $URL ?>/Gallery" class="active">
+    <a href="<?= $URL ?>/gallery" class="active">
     <img src="<?= $NIassetsURL ?>/Menu-gallery.png" />
     <img src="<?= $NIassetsURL ?>/Menu-gallery2.png" class="hoverimage" />
     </a>
-    <a href="<?= $URL ?>/Polezno" id="pz">
+    <a href="<?= $URL ?>/polezno" id="pz">
     <img src="<?= $NIassetsURL ?>/Menu-polezno.png" />
     <img src="<?= $NIassetsURL ?>/Menu-polezno2.png" class="hoverimage" />
     </a>
-    <a href="<?= $URL ?>/Contacts" id="cont">
+    <a href="<?= $URL ?>/contacts" id="cont">
     <img src="<?= $NIassetsURL ?>/Menu-contacts.png" />
     <img src="<?= $NIassetsURL ?>/Menu-contacts2.png" class="hoverimage"/>
     </a>
@@ -44,10 +39,10 @@ $URL = $this->params['URL'];
   <!-- InstanceEndEditable -->
   <div class="bottomMenu">
     <a href="<?= $URL ?>/index">Главная</a>
-    <a href="<?= $URL ?>/Uslugi">Услуги</a>
-    <a href="<?= $URL ?>/Gallery">Галерея</a>
-    <a href="<?= $URL ?>/Polezno">Полезно знать</a>
-    <a href="<?= $URL ?>/Contacts">Контакты</a>
+    <a href="<?= $URL ?>/uslugi">Услуги</a>
+    <a href="<?= $URL ?>/gallery">Галерея</a>
+    <a href="<?= $URL ?>/polezno">Полезно знать</a>
+    <a href="<?= $URL ?>/contacts">Контакты</a>
   </div>
   
   <div class="footer"><img src="<?= $NIassetsURL ?>/MenuBG.jpg" class="bg" />

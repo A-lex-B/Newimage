@@ -13,7 +13,7 @@ class GalleryWidget extends Widget
     
     public function init() {
         parent::init();
-        $this->pagename = Yii::$app->request->get('pagename', $this->pagename);
+        $this->pagename = strtolower(Yii::$app->request->get('pagename', $this->pagename));
         if(!in_array($this->pagename, ['odezhda', 'acsess', 'vyshivka'])) {
             throw new NotFoundHttpException;
         }

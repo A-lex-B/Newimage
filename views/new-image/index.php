@@ -1,8 +1,4 @@
-<?php
-$this->title = '';
-$NIassetsURL = $this->params['NIassetsURL'];
-$URL = $this->params['URL'];
-?>
+<?php $this->title = '' ?>
 
 <div class="headline">
   <img src="<?= $NIassetsURL ?>/HeadlineBG.jpg" class="bg" />
@@ -13,10 +9,10 @@ $URL = $this->params['URL'];
   <div class="page3"></div>
   <div class="menudiv"><img src="<?= $NIassetsURL ?>/MenuBG.jpg" class="bg" /><!-- InstanceBeginEditable name="menu" -->
     <a href="<?= $URL ?>/index" class="active"><img src="<?= $NIassetsURL ?>/Menu-main.png" /><img src="<?= $NIassetsURL ?>/Menu-main2.png" class="hoverimage" /></a>
-    <a href="<?= $URL ?>/Uslugi"><img src="<?= $NIassetsURL ?>/Menu-uslugi.png" /><img src="<?= $NIassetsURL ?>/Menu-uslugi2.png" class="hoverimage" /></a>
-    <a href="<?= $URL ?>/Gallery"><img src="<?= $NIassetsURL ?>/Menu-gallery.png" /><img src="<?= $NIassetsURL ?>/Menu-gallery2.png" class="hoverimage" /></a>
-    <a href="<?= $URL ?>/Polezno" id="pz"><img src="<?= $NIassetsURL ?>/Menu-polezno.png" /><img src="<?= $NIassetsURL ?>/Menu-polezno2.png" class="hoverimage" /></a>
-    <a href="<?= $URL ?>/Contacts" id="cont"><img src="<?= $NIassetsURL ?>/Menu-contacts.png" /><img src="<?= $NIassetsURL ?>/Menu-contacts2.png" class="hoverimage"/></a>
+    <a href="<?= $URL ?>/uslugi"><img src="<?= $NIassetsURL ?>/Menu-uslugi.png" /><img src="<?= $NIassetsURL ?>/Menu-uslugi2.png" class="hoverimage" /></a>
+    <a href="<?= $URL ?>/gallery"><img src="<?= $NIassetsURL ?>/Menu-gallery.png" /><img src="<?= $NIassetsURL ?>/Menu-gallery2.png" class="hoverimage" /></a>
+    <a href="<?= $URL ?>/polezno" id="pz"><img src="<?= $NIassetsURL ?>/Menu-polezno.png" /><img src="<?= $NIassetsURL ?>/Menu-polezno2.png" class="hoverimage" /></a>
+    <a href="<?= $URL ?>/contacts" id="cont"><img src="<?= $NIassetsURL ?>/Menu-contacts.png" /><img src="<?= $NIassetsURL ?>/Menu-contacts2.png" class="hoverimage"/></a>
     <!-- InstanceEndEditable --><br style="clear:left"/>
   </div>
   <!-- InstanceBeginEditable name="text" -->
