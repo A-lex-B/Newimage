@@ -1,19 +1,9 @@
-<?php $this->beginPage() ?>
+<?php
+$this->title = '';
+$NIassetsURL = $this->params['NIassetsURL'];
+$URL = $this->params['URL'];
+?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Newimage.dwt" codeOutsideHTMLIsLocked="false" -->
-<head>
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Студия моды &quot;Новый образ&quot; - индивидуальный пошив и ремонт одежды</title>
-<!-- InstanceEndEditable -->
-<?php $this->head() ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-<!-- InstanceParam name="bottommenu" type="boolean" value="false" -->
-<!-- InstanceParam name="galleryscript" type="boolean" value="false" -->
-</head>
-<body>
-<?php $this->beginBody() ?>
 <div class="headline">
   <img src="<?= $NIassetsURL ?>/HeadlineBG.jpg" class="bg" />
   <img src="<?= $NIassetsURL ?>/Newimage.png" id="newimg" />
@@ -59,8 +49,3 @@
     <p>тел. 8 (499) 236-66-05</p>
     </div>
 </div>
-<?php $this->endBody() ?>
-</body>
-<!-- InstanceEnd -->
-</html>
-<?php $this->endPage() ?>

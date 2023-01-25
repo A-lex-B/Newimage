@@ -1,46 +1,10 @@
 <?php
-use app\assets\GalleryAsset;
-use app\components\GalleryWidget;
-use yii\helpers\url;
-
-$Gassets = GalleryAsset::register($this);
-$GassetsURL = $Gassets->baseUrl;
-$NIassets = $this->assetBundles['app\assets\NewImageAsset'];
-$NIassetsURL = $NIassets->baseUrl;
-$URL = rtrim(Url::current(['view' => null, 'pagename' => null]), '/');
-
-$this->registerLinkTag([
-  'rel' => 'shortcut icon',
-  'type' => 'image/x-icon',
-  'href' => "$NIassetsURL/favicon.ico",
-]);
-$this->registerMetaTag([
-  'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=UTF-8'
-]);
-$this->registerMetaTag([
-  'name' => 'description', 'content' => 'Студия моды Новый образ осуществляет индивидуальный пошив одежды любой сложности из трикотажа, кожи, текстиля: платьев, костюмов, юбок, брюк, блузок,  вечерней одежды, верхней одежды; ремонт одежды из кожи, меха, трикотажа, текстиля; подгонку по фигуре; изготовление дизайнерских аксессуаров.'
-]);
-$this->registerMetaTag([
-  'name' => 'keywords', 'content' => 'одежда, пошив, пошива одежды, пошив одежды, ателье по пошиву одежды, пошив одежды ателье, раскрой, выкройки, заказ пошива одежды, пошив одежды москва, ателье, салон-ателье, дизайн-ателье, студия моды,  индивидуальный пошив одежды, пошив платьев, пошив вечерних платьев, пошив вечерней одежды, пошив юбок, пошив костюмов, пошив брюк, пошив верхней одежды, пошив блузок, услуги дизайнера, ремонт одежды, подгонка по фигуре, одежда на заказ, дизайнерские аксессуары,  вышивка'
-]);
-
-$this->beginPage()
+$this->title = ' - галерея';
+$NIassetsURL = $this->params['NIassetsURL'];
+$Galleryassets = $this->params['Galleryassets'];
+$URL = $this->params['URL'];
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Newimage.dwt" codeOutsideHTMLIsLocked="false" -->
-<head>
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Студия моды &quot;Новый образ&quot; - индивидуальный пошив и ремонт одежды - галерея</title>
-<!-- InstanceEndEditable -->
-<?php $this->head() ?>
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
-<!-- InstanceParam name="bottommenu" type="boolean" value="true" -->
-<!-- InstanceParam name="galleryscript" type="boolean" value="true" -->
-</head>
-<body>
-<?php $this->beginBody() ?>
 <div class="headline">
   <img src="<?= $NIassetsURL ?>/HeadlineBG.jpg" class="bg" />
   <img src="<?= $NIassetsURL ?>/Newimage.png" id="newimg" />
@@ -75,7 +39,7 @@ $this->beginPage()
   <div class="txt" id="gallery">
     <img src="<?= $NIassetsURL ?>/Ugolok1.png" id="ug1" />
     <img src="<?= $NIassetsURL ?>/Ugolok2.png" id="ug2"/>
-<?= GalleryWidget::widget(['assets' => $Gassets]) ?>
+<?= app\components\GalleryWidget::widget(['assets' => $Galleryassets]) ?>
 </div>
   <!-- InstanceEndEditable -->
   <div class="bottomMenu">
@@ -93,8 +57,3 @@ $this->beginPage()
     <p>тел. 8 (499) 236-66-05</p>
     </div>
 </div>
-<?php $this->endBody() ?>
-</body>
-<!-- InstanceEnd -->
-</html>
-<?php $this->endPage() ?>
