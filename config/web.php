@@ -49,9 +49,9 @@ $config = [
             'enableStrictParsing' => true,
 
             'rules' => [
-                '<view:\w+>' => 'new-image/page',
-                '' => 'new-image/page',
-                '<view:gallerypage>/<pagename:\w*>' => 'new-image/page',
+                [
+                    'class' =>'app\components\NewimageUrlRule',
+                ]
             ],
         ],
         
