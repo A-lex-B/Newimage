@@ -3,7 +3,7 @@
 $this->registerLinkTag([
     'rel' => 'shortcut icon',
     'type' => 'image/x-icon',
-    'href' => "{$this->params['NIassetsURL']}/favicon.ico",
+    'href' => '/favicon.ico',
 ]);
 $this->registerMetaTag([
     'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=UTF-8'

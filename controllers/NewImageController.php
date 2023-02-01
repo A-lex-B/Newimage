@@ -28,8 +28,6 @@ class NewImageController extends Controller
         }
         $URL = rtrim(Url::current(['view' => null, 'pagename' => null]), '/');
 
-        $this->view->params['NIassetsURL'] = $NIassetsURL;
-
         $params = compact(['NIassetsURL', isset($Galleryassets)?'Galleryassets':null, 'URL']);
         return $this->render($this->currentView, $params);
     }
